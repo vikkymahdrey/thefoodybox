@@ -12,4 +12,6 @@ public interface AdminService {
 
 	List<Viewer> getViewer()throws Exception;
 
+	String getVisitorCount()throws Exception;
+
 }

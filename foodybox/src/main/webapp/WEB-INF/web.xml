@@ -6,9 +6,9 @@
 	id="WebApp_ID" version="3.0">
 
 	<display-name>FoodyBox</display-name>
- 	  <!-- <welcome-file-list>
+ 	   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-  	</welcome-file-list>  -->
+  	</welcome-file-list>  
 	 
 	<servlet>
 		<servlet-name>FoodyBox</servlet-name>
@@ -38,18 +38,25 @@
 		<url-pattern>/fonts/*</url-pattern>
 	</servlet-mapping>
 	
+	<resource-ref>
+		<description>MySQL Datasource example </description>
+		<res-ref-name>jdbc/foodyboxDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container </res-auth>
+	</resource-ref>
+	
 
-	<!-- <listener>
+	 <!-- <listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener> 
- -->
+	</listener>  -->
+
 
 	<!-- <filter> <filter-name>springSecurityFilterChain</filter-name> <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> 
 		</filter> <filter-mapping> <filter-name>springSecurityFilterChain</filter-name> 
 		<url-pattern>/*</url-pattern> </filter-mapping> -->
 		
- <!--  <session-config>
-    <session-timeout>40</session-timeout>
-  </session-config>	 -->	
+  <session-config>
+    <session-timeout>-1</session-timeout>
+  </session-config>	 	
 
 </web-app>

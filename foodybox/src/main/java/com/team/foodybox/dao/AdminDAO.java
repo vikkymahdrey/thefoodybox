@@ -12,4 +12,7 @@ public interface AdminDAO extends JpaRepository<Viewer, Integer> {
 	@Query("FROM Viewer")
 	List<Viewer> getViewer() throws Exception;
 
+	@Query("select count(v.id) FROM Viewer v")
+	Object getVisitorCount();
+
 }

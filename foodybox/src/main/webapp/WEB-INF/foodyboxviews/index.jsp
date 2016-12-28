@@ -74,7 +74,7 @@ function validate() {
       	 	
       	 	<p id="bg"> <b>Contact Us</b> Email: dhavan@thefoodybox.com , Phone: +91 9986855886</p>
 
-
+			<h3 id="vcount" style="font-familty=Arial;" ><u>Visitor# <%=(String)request.getAttribute("visitorCount") %></u></h3>
     	
     	
     	
@@ -87,7 +87,7 @@ function validate() {
         		<div id="slider" style="right:-342px;">
 					<div id="sidebar" onclick="open_panel()"><img src="images/contact.png"></div>
 					<div id="header">
-							<h2 class="enquiry" style="font-family:Arial;">Enquiry form</h2>
+							<h2 class="enquiry" style="font-family:Arial;">Enquiry Form</h2>
  			
 					<input type="text" name="nameId" id="nameId"  placeholder="Full Name"/>
 					<label id="namevalid" style="color: red;" ></label>

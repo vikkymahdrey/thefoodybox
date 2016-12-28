@@ -27,9 +27,11 @@ public class LoginController {
 	private AdminService adminService;
 	
 	@RequestMapping(value= {"/"})
-	public String defaultURL(){
-		logger.debug("IN index page");
-		return "index";
+	public String defaultURL(Map<String,Object> map) throws Exception{
+		String visitorCount=adminService.getVisitorCount();
+		logger.debug("No. Of Visitor"+visitorCount);
+		map.put("visitorCount", visitorCount);
+		return "admin";
 	}
 	
 	@RequestMapping(value= {"/enquirySubmission"},method=RequestMethod.POST)

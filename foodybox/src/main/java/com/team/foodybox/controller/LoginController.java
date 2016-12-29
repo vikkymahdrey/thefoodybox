@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,13 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.team.foodybox.domain.Viewer;
+import com.team.foodybox.logger.FoodyLogger;
 import com.team.foodybox.notification.SendMail;
 import com.team.foodybox.notification.SendMailFactory;
 import com.team.foodybox.services.AdminService;
 
 @Controller
 public class LoginController {
-	private static final Logger logger = Logger.getLogger(LoginController.class);
+	private static final FoodyLogger logger = FoodyLogger.getLogger(LoginController.class);
 	
 	
 	@Autowired
@@ -31,7 +31,7 @@ public class LoginController {
 		String visitorCount=adminService.getVisitorCount();
 		logger.debug("No. Of Visitor"+visitorCount);
 		map.put("visitorCount", visitorCount);
-		return "admin";
+		return "index";
 	}
 	
 	@RequestMapping(value= {"/enquirySubmission"},method=RequestMethod.POST)

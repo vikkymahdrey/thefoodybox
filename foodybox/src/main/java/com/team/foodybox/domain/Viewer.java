@@ -11,6 +11,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
+@Table(name="viewer")
 @NamedQuery(name="Viewer.findAll", query="SELECT v FROM Viewer v")
 public class Viewer implements Serializable {
 	private static final long serialVersionUID = 1L;

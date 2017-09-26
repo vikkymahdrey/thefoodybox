@@ -20,7 +20,7 @@
 	<div id="title"><h3>Click Contact Us Button to Slide In Contact Form</h3></div>
 	
 	<!-- Sliding div starts here -->
-	<div id="slider" style="right:-342px;">
+	<div id="slider" >
 		<div id="sidebar" onclick="open_panel()">
 			<img src="images/contact.png"/>
 		</div>
@@ -36,7 +36,7 @@
 							<option>Presales</option>
 							<option>Technical</option>
 							<option>Others</option>
-						</select>
+					</select>
 					
 					<textarea type="text" value="message">Message</textarea><br/>
 					<button>Send Message</button>
